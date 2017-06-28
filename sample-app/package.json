@@ -1,0 +1,9 @@
+{
+  "name": "sample-app",
+  "version": "0.0.1",
+  "description": "sample app",
+  "main": "sample.js",
+  "author": "Nestor Urquiza",
+  "license": "MIT"
+}
+

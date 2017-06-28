@@ -1,19 +1,22 @@
 # A hardened nodejs docker image 
 See this sample docker-compose.yml to understand how to use this image:
 ```
-nodejs:
+sample-app:
   image: 'nestoru/nodejs-hardened:0.1'
   restart: always
-  container_name: nodejs
+  container_name: sample-app
   ports:
-    - 3443:3443
+    - 9999:9999
   volumes:
-    - /opt/data/napi:/app
+    - /home/ubuntu/workspace/docker/nodejs-hardened/sample-app:/app
     - /etc/timezone:/etc/timezone:ro
-  environment:
-    - ...
 ```
 ## Some useful commands
+Run the app using docker-compose.yml
+```
+docker-compose stop sample-app; docker-compose up -d sample-app
+```
+
 Clone, build, tag and push
 ```
 git clone git@github.com:nestoru/nodejs-hardened.git
