@@ -1,7 +1,7 @@
 FROM ubuntu:16.04 
 
 # node
-ENV NODE_VERSION 7.9.0
+ENV NODE_VERSION 8.9.3 
 RUN apt-get update
 #RUN apt-get install -y curl git build-essential
 #RUN curl -L https://git.io/n-install | bash
