@@ -1,13 +1,16 @@
 FROM ubuntu:16.04 
 
-# node
+# constants
 ENV NODE_VERSION 8.9.3 
-RUN apt-get update
-#RUN apt-get install -y curl git build-essential
-#RUN curl -L https://git.io/n-install | bash
-#RUN n $NODE_VERSION
 
+# common packages
+RUN apt-get update
 RUN apt-get install -y curl
+
+# graphic packages
+RUN apt-get install -y imagemagick ghostscript poppler-utils
+
+# node
 RUN rm -f /usr/local/bin/node && \
     rm -f /usr/bin/node && \
     rm -f /usr/local/bin/npm && \
