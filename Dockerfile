@@ -34,4 +34,4 @@ RUN pm2 update
 VOLUME ["/app"]
 EXPOSE 80 443 43554
 WORKDIR /app
-CMD ["pm2-docker", "start", "--auto-exit", "--env", "production", "process.yml"]
+CMD ["pm2-docker", "start", "process.yml"]
