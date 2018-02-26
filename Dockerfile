@@ -27,6 +27,7 @@ RUN rm -f /usr/local/bin/node && \
 
 # pm2
 RUN npm install pm2 -g
+pm2 update
 VOLUME ["/app"]
 EXPOSE 80 443 43554
 WORKDIR /app
